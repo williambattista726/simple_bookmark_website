@@ -1,3 +1,15 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1e1e1e; /* Set the background color */
+  color: white; /* Set the text color to white for better contrast */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: flex-start;
+  height: 100vh;
+  position: relative;
+}
+
 /* Toolbar Container */
 .toolbar {
   position: absolute;
