@@ -1,25 +1,107 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #1e1e1e; /* Set the background color */
-  color: white; /* Set the default text color to white */
+  background-color: #1e1e1e; /* Background color of the website */
+  color: white; /* Default text color */
   margin: 0;
   padding: 0;
-  display: flex;
-  align-items: flex-start;
   height: 100vh;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+}
+
+/* Add and Remove Bookmark Buttons */
+#addBookmarkBtn,
+#removeBookmarkBtn,
+#searchBookmarkBtn {
+  width: 60px;
+  height: 60px;
+  color: white;
+  font-size: 36px;
+  line-height: 60px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+  margin: 0 10px; /* Add space between buttons */
+}
+
+#addBookmarkBtn {
+  background-color: #28a745;
+}
+
+#removeBookmarkBtn {
+  background-color: #dc3545;
+}
+
+#searchBookmarkBtn {
+  background-color: #007bff;
+}
+
+#addBookmarkBtn:hover {
+  background-color: #218838;
+}
+
+#removeBookmarkBtn:hover {
+  background-color: #c82333;
+}
+
+#searchBookmarkBtn:hover {
+  background-color: #0056b3;
+}
+
+/* Bookmark List */
+#bookmarkList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  list-style: none;
+  padding: 20px;
+  margin: 20px;
+}
+
+/* Bookmark Button Style */
+.bookmark-btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.bookmark-btn:hover {
+  background-color: #0056b3;
+}
+
+.bookmark-btn a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.bookmark-btn a:hover {
+  text-decoration: underline;
 }
 
 /* Modal styling */
 .modal {
-  display: none; /* Ensure modals are hidden by default */
+  display: none; /* Hidden by default */
   position: fixed;
   z-index: 1;
-  left: 50%; /* Start positioning from the center */
-  top: 50%; /* Start positioning from the center */
-  transform: translate(-50%, -50%); /* Center the modal using transform */
-  width: 100%; /* Optional: full width for background dim */
-  height: 100%; /* Optional: full height for background dim */
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent background */
   justify-content: center;
   align-items: center;
@@ -33,12 +115,12 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   text-align: center;
   position: relative; /* For positioning the close button */
-  color: black; /* Set the text color in the modal to black */
+  color: black; /* Black text in the modal */
 }
 
 .modal-content h2 {
   margin: 0 0 10px;
-  color: black; /* Ensure the heading text is also black */
+  color: black;
 }
 
 .modal-content input[type="text"] {
@@ -47,7 +129,7 @@ body {
   margin: 5px 0;
   border: 1px solid #ccc;
   border-radius: 4px;
-  color: black; /* Set input text color to black */
+  color: black; /* Black input text */
 }
 
 .modal-content button {
@@ -68,14 +150,24 @@ body {
 /* Close Button Styling */
 .close-btn {
   position: absolute;
-  top: 10px; /* Position at the top */
-  right: 10px; /* Position at the right */
+  top: 10px;
+  right: 10px;
   font-size: 24px;
   font-weight: bold;
   cursor: pointer;
-  color: red; /* Set the color of the close button to red */
+  color: red; /* Red close button */
 }
 
 .close-btn:hover {
-  color: darkred; /* Darken the red color on hover */
+  color: darkred; /* Darken on hover */
+}
+
+/* Search Bar Style */
+#searchBar {
+  width: 200px;
+  padding: 10px;
+  margin: 0 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
 }
