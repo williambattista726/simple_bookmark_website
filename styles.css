@@ -11,8 +11,8 @@ body {
 /* Button Container for top-left corner alignment */
 #buttonContainer {
   position: absolute;
-  top: 17px;
-  left: 17px;
+  top: 20px;
+  left: 20px;
   display: flex;
   align-items: center;
 }
@@ -24,25 +24,26 @@ body {
   width: 60px;
   height: 60px;
   color: white;
-  font-size: 36px;
+  font-size: 24px; /* Adjusted font size for better fit */
   line-height: 60px;
   border: none;
-  border-radius: 10px;
+  border-radius: 20px; /* Curved rectangle */
   cursor: pointer;
   text-align: center;
   margin-right: 10px; /* Add space between buttons */
+  background-color: #007bff; /* Blue background for all buttons */
 }
 
 #addBookmarkBtn {
-  background-color: #28a745;
+  background-color: #28a745; /* Green background */
 }
 
 #removeBookmarkBtn {
-  background-color: #dc3545;
+  background-color: #dc3545; /* Red background */
 }
 
 #searchBookmarkBtn {
-  background-color: #007bff;
+  background-color: #007bff; /* Blue background */
 }
 
 #addBookmarkBtn:hover {
@@ -62,8 +63,9 @@ body {
   width: 200px;
   padding: 10px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 20px; /* Curved rectangle */
   font-size: 16px;
+  margin-left: 5px; /* Adjusted margin */
 }
 
 /* Bookmark List */
