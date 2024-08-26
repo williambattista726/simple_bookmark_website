@@ -11,8 +11,8 @@ body {
 /* Button Container for top-left corner alignment */
 #buttonContainer {
   position: absolute;
-  top: 20px;
-  left: 20px;
+  top: 17px;
+  left: 17px;
   display: flex;
   align-items: center;
 }
